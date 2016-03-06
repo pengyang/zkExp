@@ -32,14 +32,17 @@ public class LeaderLatchClient {
     }
 
     public void start() throws  Exception {
+            System.out.println("Start one leaderlatch client");
             leaderLatch.start();
     }
 
     public void close() throws IOException {
+        System.out.println("Close one leaderlatch client");
         leaderLatch.close();
     }
 
     public boolean isLeader() {
+        System.out.println("before calling hasLeadership()");
         return leaderLatch.hasLeadership();
     }
 

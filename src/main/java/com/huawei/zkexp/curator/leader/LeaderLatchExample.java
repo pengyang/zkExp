@@ -32,6 +32,7 @@ public class LeaderLatchExample {
             System.out.println("----------关闭前5个客户端，再观察选举leader的结果-----------");
             for (int i = 0; i<5;i++){
                 clients.get(i).close();
+                //examples.get(i).close();
             }
 
             // 让main程序一直监听控制台输入，不退出
